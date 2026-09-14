@@ -1,227 +1,818 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>YOUR NAME — Portfolio</title>
-
-    <meta
-        name="description"
-        content="Personal portfolio of YOUR NAME — a university student exploring technology, design and creative problem solving."
-    >
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <nav class="navbar">
-        <a href="#" class="logo">YN<span>.</span></a>
-
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+```css
+/* ========================================
+   Portfolio Website - style.css
+   ======================================== */
 
 
-    <main>
+/* ========================================
+   1. 基本設定
+   ======================================== */
 
-        <!-- HERO -->
-        <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">FIRST-YEAR UNIVERSITY STUDENT</p>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-                <h1>
-                    I build things<br>
-                    <span>worth remembering.</span>
-                </h1>
+html {
+  scroll-behavior: smooth;
+}
 
-                <p class="hero-description">
-                    I'm YOUR NAME, a student interested in technology,
-                    design and turning ideas into meaningful digital experiences.
-                </p>
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans TC",
+    sans-serif;
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="button primary">View my work ↓</a>
-                    <a href="#contact" class="button secondary">Let's connect</a>
-                </div>
-            </div>
+  background: #07101f;
+  color: #f5f7ff;
 
-            <div class="hero-orbit">
-                <div class="orbit orbit-1"></div>
-                <div class="orbit orbit-2"></div>
-                <div class="orbit-dot"></div>
+  line-height: 1.7;
+}
 
-                <div class="hero-card">
-                    <span>01</span>
-                    <strong>CURIOUS</strong>
-                    <small>Always learning.</small>
-                </div>
-            </div>
-        </section>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
+img {
+  max-width: 100%;
+  display: block;
+}
 
-        <!-- ABOUT -->
-        <section id="about" class="section about">
-            <div class="section-label">01 / ABOUT</div>
-
-            <div class="about-grid">
-                <h2>
-                    A student today.<br>
-                    <em>A creator tomorrow.</em>
-                </h2>
-
-                <div class="about-text">
-                    <p>
-                        Hi, I'm YOUR NAME. I'm currently a first-year
-                        university student studying Computer Science.
-                    </p>
-
-                    <p>
-                        I'm fascinated by the intersection of technology,
-                        creativity and human experience. I'm currently
-                        building my foundation in programming, web development
-                        and problem solving.
-                    </p>
-
-                    <p>
-                        This website will grow with me throughout university —
-                        from my first small experiments to the projects
-                        I'm proudest of.
-                    </p>
-                </div>
-            </div>
-        </section>
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
 
 
-        <!-- SKILLS -->
-        <section id="skills" class="section skills-section">
-            <div class="section-label">02 / SKILLS</div>
+/* ========================================
+   2. 導覽列 Navbar
+   ======================================== */
 
-            <h2>Things I'm learning.</h2>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-            <div class="skills-grid">
-                <div class="skill">
-                    <span>01</span>
-                    <h3>HTML / CSS</h3>
-                    <p>Building clean, responsive interfaces.</p>
-                </div>
+  width: 100%;
+  height: 70px;
 
-                <div class="skill">
-                    <span>02</span>
-                    <h3>JavaScript</h3>
-                    <p>Making websites interactive and dynamic.</p>
-                </div>
+  z-index: 1000;
 
-                <div class="skill">
-                    <span>03</span>
-                    <h3>Programming</h3>
-                    <p>Learning how to turn problems into algorithms.</p>
-                </div>
+  background: rgba(7, 16, 31, 0.85);
 
-                <div class="skill">
-                    <span>04</span>
-                    <h3>UI / UX</h3>
-                    <p>Thinking about how people experience products.</p>
-                </div>
-            </div>
-        </section>
+  backdrop-filter: blur(12px);
 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-        <!-- PROJECTS -->
-        <section id="projects" class="section projects-section">
-            <div class="section-label">03 / PROJECTS</div>
+nav {
+  height: 70px;
 
-            <div class="projects-heading">
-                <h2>Selected work.</h2>
-                <p>Projects will grow with me.</p>
-            </div>
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-            <div class="projects-grid">
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
 
-                <article class="project-card featured">
-                    <div class="project-number">01</div>
+  background:
+    linear-gradient(
+      135deg,
+      #6c8cff,
+      #a855f7
+    );
 
-                    <div class="project-info">
-                        <p>WEB DEVELOPMENT</p>
-                        <h3>Personal Portfolio</h3>
-                        <span>
-                            My first step toward building a professional
-                            digital presence.
-                        </span>
-                    </div>
+  -webkit-background-clip: text;
+  background-clip: text;
 
-                    <div class="project-arrow">↗</div>
-                </article>
+  color: transparent;
+}
 
+.nav-links {
+  display: flex;
 
-                <article class="project-card">
-                    <div class="project-number">02</div>
+  gap: 30px;
 
-                    <div class="project-info">
-                        <p>COMING SOON</p>
-                        <h3>Future Project</h3>
-                        <span>
-                            An upcoming project that will document my
-                            learning journey.
-                        </span>
-                    </div>
+  list-style: none;
+}
 
-                    <div class="project-arrow">↗</div>
-                </article>
+.nav-links a {
+  color: #b8c1d9;
+
+  font-size: 0.95rem;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
 
 
-                <article class="project-card">
-                    <div class="project-number">03</div>
+/* ========================================
+   3. Hero 首頁
+   ======================================== */
 
-                    <div class="project-info">
-                        <p>COMING SOON</p>
-                        <h3>Something Great</h3>
-                        <span>
-                            There is plenty of room here for the project
-                            I'm going to be proud of.
-                        </span>
-                    </div>
+.hero {
+  min-height: 100vh;
 
-                    <div class="project-arrow">↗</div>
-                </article>
+  display: flex;
+  align-items: center;
 
-            </div>
-        </section>
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(74, 102, 255, 0.25),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(168, 85, 247, 0.15),
+      transparent 35%
+    );
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -150px;
+  top: 100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(70, 100, 255, 0.25),
+      rgba(168, 85, 247, 0.15)
+    );
+
+  filter: blur(100px);
+
+  border-radius: 50%;
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.hello {
+  color: #6c9cff;
+
+  letter-spacing: 4px;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size:
+    clamp(3.5rem, 8vw, 7rem);
+
+  line-height: 1;
+
+  margin-bottom: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #91a9ff,
+      #c084fc
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.hero h2 {
+  font-size:
+    clamp(1.2rem, 3vw, 2rem);
+
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+
+  color: #aab4cb;
+
+  font-size: 1.05rem;
+
+  margin-bottom: 35px;
+}
 
 
-        <!-- CONTACT -->
-        <section id="contact" class="contact-section">
-            <p class="eyebrow">04 / CONTACT</p>
+/* ========================================
+   4. Buttons 按鈕
+   ======================================== */
 
-            <h2>
-                Let's build<br>
-                <span>something.</span>
-            </h2>
+.buttons {
+  display: flex;
 
-            <p>
-                I'm always open to learning, collaborating and meeting
-                people who are building interesting things.
-            </p>
+  gap: 15px;
 
-            <a href="mailto:your.email@example.com" class="contact-email">
-                your.email@example.com ↗
-            </a>
-        </section>
+  flex-wrap: wrap;
+}
 
-    </main>
+.btn {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.btn-primary {
+  background:
+    linear-gradient(
+      135deg,
+      #4f7cff,
+      #8b5cf6
+    );
+
+  box-shadow:
+    0 10px 30px
+    rgba(79, 124, 255, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(79, 124, 255, 0.4);
+}
+
+.btn-outline {
+  border: 1px solid #65708a;
+
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  transform: translateY(-3px);
+}
 
 
-    <footer>
-        <span>© 2026 YOUR NAME</span>
-        <span>Built with curiosity.</span>
-    </footer>
+/* ========================================
+   5. Section 區塊
+   ======================================== */
+
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.2rem;
+
+  margin-bottom: 45px;
+
+  position: relative;
+
+  display: inline-block;
+}
+
+.section-title::before {
+  content: "";
+
+  position: absolute;
+
+  left: -15px;
+  top: 10px;
+
+  width: 4px;
+  height: 30px;
+
+  background:
+    linear-gradient(
+      #4f7cff,
+      #a855f7
+    );
+
+  border-radius: 10px;
+}
 
 
-    <script src="script.js"></script>
-</body>
-</html>
+/* ========================================
+   6. About Me
+   ======================================== */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.about-text p {
+  color: #aab4cb;
+
+  margin-bottom: 18px;
+}
+
+.info-list {
+  display: grid;
+
+  gap: 15px;
+}
+
+.info-item {
+  padding: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 15px;
+
+  transition: 0.3s;
+}
+
+.info-item:hover {
+  transform: translateX(5px);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+}
+
+.info-item strong {
+  display: block;
+
+  color: #ffffff;
+
+  margin-bottom: 3px;
+}
+
+.info-item span {
+  color: #9da8c0;
+}
+
+
+/* ========================================
+   7. Projects 作品
+   ======================================== */
+
+.projects {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.project-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(100, 140, 255, 0.6);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0, 0, 0, 0.25);
+}
+
+.project-image {
+  height: 180px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 3rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #111d3a,
+      #18264b
+    );
+}
+
+.project-card:nth-child(2)
+.project-image {
+  background:
+    linear-gradient(
+      135deg,
+      #25163e,
+      #39205c
+    );
+}
+
+.project-card:nth-child(3)
+.project-image {
+  background:
+    linear-gradient(
+      135deg,
+      #102e38,
+      #123e51
+    );
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  margin-bottom: 10px;
+
+  font-size: 1.25rem;
+}
+
+.project-content p {
+  color: #9da8c0;
+
+  font-size: 0.95rem;
+
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 0.8rem;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(100, 130, 255, 0.15);
+
+  color: #9eb3ff;
+}
+
+.project-link {
+  color: #6d9cff;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.project-link:hover {
+  color: #a8c0ff;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   8. Skills 技能
+   ======================================== */
+
+.skills {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 20px;
+}
+
+.skill {
+  padding: 25px 10px;
+
+  text-align: center;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  border-color:
+    rgba(100, 140, 255, 0.4);
+}
+
+.skill-icon {
+  font-size: 2rem;
+
+  margin-bottom: 10px;
+}
+
+.skill p {
+  font-weight: 600;
+}
+
+.skill small {
+  color: #8995ad;
+}
+
+
+/* ========================================
+   9. Contact 聯絡
+   ======================================== */
+
+.contact {
+  text-align: center;
+
+  padding: 70px 30px;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(100, 100, 255, 0.2),
+      transparent 40%
+    ),
+
+    rgba(255, 255, 255, 0.04);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #9da8c0;
+
+  margin-bottom: 30px;
+}
+
+
+/* ========================================
+   10. Footer
+   ======================================== */
+
+footer {
+  padding: 30px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  color: #768197;
+
+  text-align: center;
+
+  font-size: 0.9rem;
+}
+
+
+/* ========================================
+   11. 滾動動畫
+   ======================================== */
+
+.fade-in {
+  opacity: 0;
+
+  transform:
+    translateY(25px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* ========================================
+   12. Selection 選取文字
+   ======================================== */
+
+::selection {
+  background: #6c8cff;
+  color: white;
+}
+
+
+/* ========================================
+   13. Scrollbar
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07101f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #34466e;
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #526da8;
+}
+
+
+/* ========================================
+   14. 平板
+   ======================================== */
+
+@media (max-width: 850px) {
+
+  .nav-links {
+    gap: 15px;
+
+    font-size: 0.9rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+/* ========================================
+   15. 手機
+   ======================================== */
+
+@media (max-width: 550px) {
+
+  header {
+    height: 60px;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .btn {
+    text-align: center;
+
+    width: 100%;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .skills {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .contact {
+    padding: 50px 20px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+}
+
+
+/* ========================================
+   16. 小螢幕手機
+   ======================================== */
+
+@media (max-width: 380px) {
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+```
