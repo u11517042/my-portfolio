@@ -1,818 +1,106 @@
-```css
-/* ========================================
-   Portfolio Website - style.css
-   ======================================== */
-
-
-/* ========================================
-   1. 基本設定
-   ======================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Sans TC",
-    sans-serif;
-
-  background: #07101f;
-  color: #f5f7ff;
-
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(1100px, 90%);
-  margin: 0 auto;
-}
-
-
-/* ========================================
-   2. 導覽列 Navbar
-   ======================================== */
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 70px;
-
-  z-index: 1000;
-
-  background: rgba(7, 16, 31, 0.85);
-
-  backdrop-filter: blur(12px);
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-nav {
-  height: 70px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 800;
-
-  background:
-    linear-gradient(
-      135deg,
-      #6c8cff,
-      #a855f7
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  color: transparent;
-}
-
-.nav-links {
-  display: flex;
-
-  gap: 30px;
-
-  list-style: none;
-}
-
-.nav-links a {
-  color: #b8c1d9;
-
-  font-size: 0.95rem;
-
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffffff;
-}
-
-
-/* ========================================
-   3. Hero 首頁
-   ======================================== */
-
-.hero {
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-
-  position: relative;
-
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(74, 102, 255, 0.25),
-      transparent 35%
-    ),
-
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(168, 85, 247, 0.15),
-      transparent 35%
-    );
-}
-
-.hero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 500px;
-  height: 500px;
-
-  right: -150px;
-  top: 100px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(70, 100, 255, 0.25),
-      rgba(168, 85, 247, 0.15)
-    );
-
-  filter: blur(100px);
-
-  border-radius: 50%;
-}
-
-.hero-content {
-  position: relative;
-
-  z-index: 2;
-}
-
-.hello {
-  color: #6c9cff;
-
-  letter-spacing: 4px;
-
-  font-size: 0.9rem;
-
-  font-weight: 700;
-
-  margin-bottom: 10px;
-}
-
-.hero h1 {
-  font-size:
-    clamp(3.5rem, 8vw, 7rem);
-
-  line-height: 1;
-
-  margin-bottom: 20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #ffffff,
-      #91a9ff,
-      #c084fc
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  color: transparent;
-}
-
-.hero h2 {
-  font-size:
-    clamp(1.2rem, 3vw, 2rem);
-
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 600px;
-
-  color: #aab4cb;
-
-  font-size: 1.05rem;
-
-  margin-bottom: 35px;
-}
-
-
-/* ========================================
-   4. Buttons 按鈕
-   ======================================== */
-
-.buttons {
-  display: flex;
-
-  gap: 15px;
-
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-
-  padding: 12px 24px;
-
-  border-radius: 999px;
-
-  font-weight: 700;
-
-  transition: 0.3s;
-
-  cursor: pointer;
-}
-
-.btn-primary {
-  background:
-    linear-gradient(
-      135deg,
-      #4f7cff,
-      #8b5cf6
-    );
-
-  box-shadow:
-    0 10px 30px
-    rgba(79, 124, 255, 0.25);
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 15px 35px
-    rgba(79, 124, 255, 0.4);
-}
-
-.btn-outline {
-  border: 1px solid #65708a;
-
-  color: #ffffff;
-}
-
-.btn-outline:hover {
-  background:
-    rgba(255, 255, 255, 0.08);
-
-  transform: translateY(-3px);
-}
-
-
-/* ========================================
-   5. Section 區塊
-   ======================================== */
-
-section {
-  padding: 100px 0;
-}
-
-.section-title {
-  font-size: 2.2rem;
-
-  margin-bottom: 45px;
-
-  position: relative;
-
-  display: inline-block;
-}
-
-.section-title::before {
-  content: "";
-
-  position: absolute;
-
-  left: -15px;
-  top: 10px;
-
-  width: 4px;
-  height: 30px;
-
-  background:
-    linear-gradient(
-      #4f7cff,
-      #a855f7
-    );
-
-  border-radius: 10px;
-}
-
-
-/* ========================================
-   6. About Me
-   ======================================== */
-
-.about-grid {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 60px;
-
-  align-items: center;
-}
-
-.about-text p {
-  color: #aab4cb;
-
-  margin-bottom: 18px;
-}
-
-.info-list {
-  display: grid;
-
-  gap: 15px;
-}
-
-.info-item {
-  padding: 18px;
-
-  background:
-    rgba(255, 255, 255, 0.04);
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.08);
-
-  border-radius: 15px;
-
-  transition: 0.3s;
-}
-
-.info-item:hover {
-  transform: translateX(5px);
-
-  background:
-    rgba(255, 255, 255, 0.07);
-}
-
-.info-item strong {
-  display: block;
-
-  color: #ffffff;
-
-  margin-bottom: 3px;
-}
-
-.info-item span {
-  color: #9da8c0;
-}
-
-
-/* ========================================
-   7. Projects 作品
-   ======================================== */
-
-.projects {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 25px;
-}
-
-.project-card {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.07),
-      rgba(255, 255, 255, 0.025)
-    );
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.1);
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  transition: 0.4s;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-
-  border-color:
-    rgba(100, 140, 255, 0.6);
-
-  box-shadow:
-    0 20px 50px
-    rgba(0, 0, 0, 0.25);
-}
-
-.project-image {
-  height: 180px;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  font-size: 3rem;
-
-  background:
-    linear-gradient(
-      135deg,
-      #111d3a,
-      #18264b
-    );
-}
-
-.project-card:nth-child(2)
-.project-image {
-  background:
-    linear-gradient(
-      135deg,
-      #25163e,
-      #39205c
-    );
-}
-
-.project-card:nth-child(3)
-.project-image {
-  background:
-    linear-gradient(
-      135deg,
-      #102e38,
-      #123e51
-    );
-}
-
-.project-content {
-  padding: 25px;
-}
-
-.project-content h3 {
-  margin-bottom: 10px;
-
-  font-size: 1.25rem;
-}
-
-.project-content p {
-  color: #9da8c0;
-
-  font-size: 0.95rem;
-
-  margin-bottom: 20px;
-}
-
-.tags {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
-
-  margin-bottom: 20px;
-}
-
-.tag {
-  font-size: 0.8rem;
-
-  padding: 5px 10px;
-
-  border-radius: 999px;
-
-  background:
-    rgba(100, 130, 255, 0.15);
-
-  color: #9eb3ff;
-}
-
-.project-link {
-  color: #6d9cff;
-
-  font-weight: 700;
-
-  transition: 0.3s;
-}
-
-.project-link:hover {
-  color: #a8c0ff;
-
-  letter-spacing: 1px;
-}
-
-
-/* ========================================
-   8. Skills 技能
-   ======================================== */
-
-.skills {
-  display: grid;
-
-  grid-template-columns:
-    repeat(6, 1fr);
-
-  gap: 20px;
-}
-
-.skill {
-  padding: 25px 10px;
-
-  text-align: center;
-
-  background:
-    rgba(255, 255, 255, 0.04);
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.08);
-
-  border-radius: 18px;
-
-  transition: 0.3s;
-}
-
-.skill:hover {
-  transform: translateY(-5px);
-
-  background:
-    rgba(255, 255, 255, 0.07);
-
-  border-color:
-    rgba(100, 140, 255, 0.4);
-}
-
-.skill-icon {
-  font-size: 2rem;
-
-  margin-bottom: 10px;
-}
-
-.skill p {
-  font-weight: 600;
-}
-
-.skill small {
-  color: #8995ad;
-}
-
-
-/* ========================================
-   9. Contact 聯絡
-   ======================================== */
-
-.contact {
-  text-align: center;
-
-  padding: 70px 30px;
-
-  border-radius: 30px;
-
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(100, 100, 255, 0.2),
-      transparent 40%
-    ),
-
-    rgba(255, 255, 255, 0.04);
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.08);
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-
-  margin-bottom: 15px;
-}
-
-.contact p {
-  color: #9da8c0;
-
-  margin-bottom: 30px;
-}
-
-
-/* ========================================
-   10. Footer
-   ======================================== */
-
-footer {
-  padding: 30px 0;
-
-  border-top:
-    1px solid
-    rgba(255, 255, 255, 0.08);
-
-  color: #768197;
-
-  text-align: center;
-
-  font-size: 0.9rem;
-}
-
-
-/* ========================================
-   11. 滾動動畫
-   ======================================== */
-
-.fade-in {
-  opacity: 0;
-
-  transform:
-    translateY(25px);
-
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-
-  transform:
-    translateY(0);
-}
-
-
-/* ========================================
-   12. Selection 選取文字
-   ======================================== */
-
-::selection {
-  background: #6c8cff;
-  color: white;
-}
-
-
-/* ========================================
-   13. Scrollbar
-   ======================================== */
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #07101f;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #34466e;
-
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #526da8;
-}
-
-
-/* ========================================
-   14. 平板
-   ======================================== */
-
-@media (max-width: 850px) {
-
-  .nav-links {
-    gap: 15px;
-
-    font-size: 0.9rem;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-  }
-
-  .projects {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .skills {
-    grid-template-columns:
-      repeat(3, 1fr);
-  }
-
-}
-
-
-/* ========================================
-   15. 手機
-   ======================================== */
-
-@media (max-width: 550px) {
-
-  header {
-    height: 60px;
-  }
-
-  nav {
-    height: 60px;
-  }
-
-  .logo {
-    font-size: 1.1rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  section {
-    padding: 70px 0;
-  }
-
-  .hero {
-    min-height: 90vh;
-  }
-
-  .hero h1 {
-    font-size: 4rem;
-  }
-
-  .hero h2 {
-    font-size: 1.2rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-  .btn {
-    text-align: center;
-
-    width: 100%;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  .skills {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .section-title {
-    font-size: 1.9rem;
-  }
-
-  .contact {
-    padding: 50px 20px;
-  }
-
-  .contact h2 {
-    font-size: 2rem;
-  }
-
-}
-
-
-/* ========================================
-   16. 小螢幕手機
-   ======================================== */
-
-@media (max-width: 380px) {
-
-  .hero h1 {
-    font-size: 3.2rem;
-  }
-
-  .skills {
-    grid-template-columns: 1fr 1fr;
-  }
-
-}
-```
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集 Portfolio</title>
+    <!-- 引入 Tailwind CSS CDN，無需安裝即可擁有現代化美觀樣式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans leading-normal tracking-normal">
+
+    <!-- 導覽列 Navbar -->
+    <nav class="max-w-4xl mx-auto p-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-indigo-400">Your Name</h1>
+        <div class="space-x-4 text-sm text-slate-400">
+            <a href="#about" class="hover:text-white transition">關於我</a>
+            <a href="#projects" class="hover:text-white transition">作品集</a>
+            <a href="#skills" class="hover:text-white transition">專業技能</a>
+            <a href="#contact" class="hover:text-white transition">聯絡方式</a>
+        </div>
+    </nav>
+
+    <!-- Hero 英雄區塊 -->
+    <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center md:text-left">
+        <div class="inline-block px-3 py-1 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-semibold mb-4">
+            🎓 大學一年級新生 / 未來全端工程師 (依你的科系修改)
+        </div>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+            你好，我是 <span class="text-indigo-400">[你的名字]</span>。<br>
+            熱愛探索技術與創造價值的開發者。
+        </h2>
+        <p class="text-slate-400 text-lg max-w-2xl mb-8">
+            目前正在讀大一，正在累積各種專案經驗。這個網站紀錄我的成長過程，目標是在畢業前成為能夠獨立完成高品質專案的專業人才！
+        </p>
+        <a href="#projects" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/20 transition">
+            查看我的作品 👇
+        </a>
+    </section>
+
+    <!-- 專業技能 Skills -->
+    <section id="skills" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800">
+        <h3 class="text-2xl font-bold text-white mb-6">💡 核心技能 / 學習目標</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                <div class="text-indigo-400 font-semibold mb-1">HTML & CSS</div>
+                <div class="text-xs text-slate-400">網頁結構與切版樣式</div>
+            </div>
+            <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                <div class="text-indigo-400 font-semibold mb-1">JavaScript</div>
+                <div class="text-xs text-slate-400">網頁互動邏輯學習中</div>
+            </div>
+            <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                <div class="text-indigo-400 font-semibold mb-1">Git / GitHub</div>
+                <div class="text-xs text-slate-400">程式碼版本控制</div>
+            </div>
+            <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                <div class="text-indigo-400 font-semibold mb-1">UI/UX 設計</div>
+                <div class="text-xs text-slate-400">使用者體驗與介面</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集 Projects -->
+    <section id="projects" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800">
+        <h3 class="text-2xl font-bold text-white mb-6">🚀 專案經歷</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- 作品卡片 1 -->
+            <div class="bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 transition">
+                <h4 class="text-xl font-bold text-white mb-2">個人作品集網站 (Portfolio)</h4>
+                <p class="text-slate-400 text-sm mb-4">
+                    使用 HTML5 與 Tailwind CSS 打造的大一首個個人網站雛型，展示個人資訊與學業規劃。
+                </p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">HTML</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">Tailwind CSS</span>
+                </div>
+            </div>
+
+            <!-- 作品卡片 2 (預留未來專案) -->
+            <div class="bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 transition">
+                <h4 class="text-xl font-bold text-white mb-2">大一課程期末專案 (籌備中)</h4>
+                <p class="text-slate-400 text-sm mb-4">
+                    預計結合程式設計課程，開發一項解決生活問題的應用程式。
+                </p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">Planning</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 聯絡方式 Contact & 頁尾 Footer -->
+    <footer id="contact" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800 text-center">
+        <h3 class="text-xl font-bold text-white mb-4">與我保持聯絡</h3>
+        <p class="text-slate-400 text-sm mb-6">隨時歡迎透過 Email 或社群媒體指教交流！</p>
+        <div class="flex justify-center space-x-6 text-sm text-indigo-400 mb-8">
+            <a href="mailto:your.email@example.com" class="hover:underline">Email</a>
+            <a href="https://github.com" target="_blank" class="hover:underline">GitHub</a>
+        </div>
+        <p class="text-xs text-slate-500">© 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
