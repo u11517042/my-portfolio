@@ -23,11 +23,11 @@
     <!-- Hero 英雄區塊 -->
     <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center md:text-left">
         <div class="inline-block px-3 py-1 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-semibold mb-4">
-            🎓臺北市立大學/學習與媒材設計學系
+            🎓 臺北市立大學 / 學習與媒材設計學系
         </div>
         <h2 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
             你好，我是 <span class="text-indigo-400">林珈伃</span>。<br>
-            熱愛探索未知與發揮創意進行設計
+            為學習設計媒材
         </h2>
         <p class="text-slate-400 text-lg max-w-2xl mb-8">
             目前正在讀大一，正在累積各種專案經驗。這個網站紀錄我的成長過程，目標是在畢業前成為能夠獨立完成高品質專案的專業人才！
@@ -62,11 +62,11 @@
 
     <!-- 作品集 Projects -->
     <section id="projects" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800">
-        <h3 class="text-2xl font-bold text-white mb-6">🚀 專案經歷</h3>
+        <h3 class="text-2xl font-bold text-white mb-6">🚀 學習經歷</h3>
         <div class="grid md:grid-cols-2 gap-6">
             
             <!-- 作品卡片 1 -->
-            <div class="bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 transition">
+            <div onclick="openProject('portfolio')" class="cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
                 <h4 class="text-xl font-bold text-white mb-2">個人作品集網站 (Portfolio)</h4>
                 <p class="text-slate-400 text-sm mb-4">
                     使用 HTML5 與 Tailwind CSS 打造的大一首個個人網站雛型，展示個人資訊與學業規劃。
@@ -76,6 +76,17 @@
                     <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">Tailwind CSS</span>
                 </div>
             </div>
+<!-- 作品卡片：數位科技概論 -->
+<div onclick="openProject('digitalTech')" class="cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+    <h4 class="text-xl font-bold text-white mb-2">數位科技概論</h4>
+    <p class="text-slate-400 text-sm mb-4">
+        修習大一必修課程「數位科技概論」的學習成果整理。
+    </p>
+    <div class="flex gap-2">
+        <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+    </div>
+    <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+</div>
 
             <!-- 作品卡片 2 (預留未來專案) -->
             <div class="bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 transition">
@@ -90,6 +101,27 @@
 
         </div>
     </section>
+    <!-- 科學活動介紹 Science Activities -->
+    <section id="science" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800">
+        <h3 class="text-2xl font-bold text-white mb-6">🔬 科學活動介紹</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+            <div onclick="openProject('sci1')" class="cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h4 class="text-lg font-bold text-white mb-2">水與生活：小小科學探索日</h4>
+                <p class="text-slate-400 text-sm mb-2">活動簡短描述，可自行修改。</p>
+                <div class="text-indigo-400 text-xs">查看詳細 →</div>
+            </div>
+
+        </div>
+    </section>
+<!-- 專案詳細頁面 Modal -->
+<div id="projectModal" class="fixed inset-0 z-50 hidden">
+    <div onclick="closeProject()" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="relative max-w-2xl mx-auto mt-16 md:mt-24 bg-slate-800 border border-slate-700 rounded-2xl p-8 max-h-[80vh] overflow-y-auto">
+        <button onclick="closeProject()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
 
     <!-- 聯絡方式 Contact & 頁尾 Footer -->
     <footer id="contact" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800 text-center">
@@ -101,6 +133,61 @@
         </div>
         <p class="text-xs text-slate-500">© 2026 Your Name. All rights reserved.</p>
     </footer>
+<script>
+    const projects = {
+        portfolio: {
+            title: "個人作品集網站 (Portfolio)",
+            tags: ["HTML", "Tailwind CSS"],
+            body: `<p class="text-slate-300">使用 HTML5 與 Tailwind CSS 打造的大一首個個人網站雛型。</p>`
+        },
+        digitalTech: {
+            title: "數位科技概論",
+            tags: ["課程作業"],
+            body: `<p class="text-slate-300">這裡放你這門課的學習內容、心得反思，可自行編輯。</p>`
+        },
+        future: {
+            title: "大一課程期末專案 (籌備中)",
+            tags: ["Planning"],
+            body: `<p class="text-slate-300">預計結合程式設計課程，開發一項解決生活問題的應用程式。</p>`
+        },
+        sci1: {
+            title: "水與生活：小小科學探索日",
+            tags: ["科學活動"],
+            body: `
+                <h1 class="text-2xl font-bold text-white mb-2">水與生活：小小科學探索日</h1>
+                <p class="text-slate-300 mb-6">一起從生活中的水，發現科學的有趣之處。</p>
+
+                <h2 class="text-xl font-bold text-indigo-400 mt-6 mb-2">活動介紹</h2>
+                <p class="text-slate-300 mb-4">這次活動適合國小中年級學生，請帶著好奇心一起參加。</p>
+
+                <h3 class="text-lg font-semibold text-white mt-4 mb-1">觀察水的樣子</h3>
+                <p class="text-slate-300 mb-4">看看不同容器中的水，試著說出你觀察到的變化。</p>
+
+                <h3 class="text-lg font-semibold text-white mt-4 mb-1">認識水的名字</h3>
+                <p class="text-slate-300 mb-4">水的化學式是 H<sub>2</sub>O。</p>
+
+                <h2 class="text-xl font-bold text-indigo-400 mt-6 mb-2">參加前的小提醒</h2>
+                <p class="text-slate-300 mb-2">請<b>自備水壺</b>，並準備一本觀察筆記。</p>
+                <p class="text-slate-300 mb-2">今天的探索口號是：<i>先觀察，再提問！</i></p>
+                <p class="text-slate-300">我們將使用面積為 100 cm<sup>2</sup> 的方形觀察卡。</p>
+            `
+        }
+    };
+
+    function openProject(key) {
+        const p = projects[key];
+        const tagsHtml = p.tags.map(t => `<span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">${t}</span>`).join(' ');
+        document.getElementById('modalContent').innerHTML = `
+            <div class="flex gap-2 mb-6">${tagsHtml}</div>
+            ${p.body}
+        `;
+        document.getElementById('projectModal').classList.remove('hidden');
+    }
+
+    function closeProject() {
+        document.getElementById('projectModal').classList.add('hidden');
+    }
+</script>
 
 </body>
 </html>
