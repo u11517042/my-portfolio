@@ -101,19 +101,6 @@
 
         </div>
     </section>
-    <!-- 科學活動介紹 Science Activities -->
-    <section id="science" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800">
-        <h3 class="text-2xl font-bold text-white mb-6">🔬 科學活動介紹</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-
-            <div onclick="openProject('sci1')" class="cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
-                <h4 class="text-lg font-bold text-white mb-2">水與生活：小小科學探索日</h4>
-                <p class="text-slate-400 text-sm mb-2">活動簡短描述，可自行修改。</p>
-                <div class="text-indigo-400 text-xs">查看詳細 →</div>
-            </div>
-
-        </div>
-    </section>
 <!-- 專案詳細頁面 Modal -->
 <div id="projectModal" class="fixed inset-0 z-50 hidden">
     <div onclick="closeProject()" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
@@ -143,7 +130,15 @@
         digitalTech: {
             title: "數位科技概論",
             tags: ["課程作業"],
-            body: `<p class="text-slate-300">這裡放你這門課的學習內容、心得反思，可自行編輯。</p>`
+            body: `
+                <p class="text-slate-300 mb-6">大一進行式</p>
+
+                <div onclick="openProject('sci1')" class="cursor-pointer bg-slate-800/40 border border-slate-700/60 rounded-xl p-4 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                    <h4 class="text-md font-bold text-white mb-1">🔬 科學活動介紹</h4>
+                    <p class="text-slate-400 text-sm mb-1">水與生活：小小科學探索日</p>
+                    <div class="text-indigo-400 text-xs">查看詳細 →</div>
+                </div>
+            `
         },
         future: {
             title: "大一課程期末專案 (籌備中)",
@@ -152,24 +147,28 @@
         },
         sci1: {
             title: "水與生活：小小科學探索日",
-            tags: ["科學活動"],
+            tags: ["課程作業"],
             body: `
-                <h1 class="text-2xl font-bold text-white mb-2">水與生活：小小科學探索日</h1>
-                <p class="text-slate-300 mb-6">一起從生活中的水，發現科學的有趣之處。</p>
+                <iframe class="w-full h-[400px] bg-transparent border-0" srcdoc="
+                    <body style='color: #cbd5e1; font-family: sans-serif; margin: 0;'>
+                        <h1>水與生活：小小科學探索日</h1>
+                        <p>一起從生活中的水，發現科學的有趣之處。</p>
 
-                <h2 class="text-xl font-bold text-indigo-400 mt-6 mb-2">活動介紹</h2>
-                <p class="text-slate-300 mb-4">這次活動適合國小中年級學生，請帶著好奇心一起參加。</p>
+                        <h2>活動介紹</h2>
+                        <p>這次活動適合國小中年級學生，請帶著好奇心一起參加。</p>
 
-                <h3 class="text-lg font-semibold text-white mt-4 mb-1">觀察水的樣子</h3>
-                <p class="text-slate-300 mb-4">看看不同容器中的水，試著說出你觀察到的變化。</p>
+                        <h3>觀察水的樣子</h3>
+                        <p>看看不同容器中的水，試著說出你觀察到的變化。</p>
 
-                <h3 class="text-lg font-semibold text-white mt-4 mb-1">認識水的名字</h3>
-                <p class="text-slate-300 mb-4">水的化學式是 H<sub>2</sub>O。</p>
+                        <h3>認識水的名字</h3>
+                        <p>水的化學式是 H<sub>2</sub>O。</p>
 
-                <h2 class="text-xl font-bold text-indigo-400 mt-6 mb-2">參加前的小提醒</h2>
-                <p class="text-slate-300 mb-2">請<b>自備水壺</b>，並準備一本觀察筆記。</p>
-                <p class="text-slate-300 mb-2">今天的探索口號是：<i>先觀察，再提問！</i></p>
-                <p class="text-slate-300">我們將使用面積為 100 cm<sup>2</sup> 的方形觀察卡。</p>
+                        <p>參加前的小提醒</p>
+                        <p>請<b>自備水壺</b>，並準備一本觀察筆記。</p>
+                        <p>今天的探索口號是：<i>先觀察，再提問！</i></p>
+                        <p>我們將使用面積為 100 cm<sup>2</sup> 的方形觀察卡。</p>
+                    </body>
+                "></iframe>
             `
         }
     };
@@ -191,3 +190,4 @@
 
 </body>
 </html>
+
