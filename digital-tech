@@ -33,6 +33,86 @@
                 <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
             </a>
 
+            <a href="02-html-media.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動二：讓小站有聲有影</h2>
+                <p class="text-slate-400 text-sm mb-4">用圖片、聲音和影片，介紹一次觀察活動。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">HTML</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
+            <a href="03-html-plan.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動三：整理我的學習計畫</h2>
+                <p class="text-slate-400 text-sm mb-4">用清單與表格，整理學習計畫。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">HTML</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
+            <a href="04-html-form.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動四：設計一張活動報名表</h2>
+                <p class="text-slate-400 text-sm mb-4">用表單元件，設計一張活動報名表（練習版）。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">HTML</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
+            <a href="05-css-style.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動五：同一種內容，換一種風格</h2>
+                <p class="text-slate-400 text-sm mb-4">用 CSS 調整顏色、字體與留白，換一種視覺風格。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">CSS</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
+            <a href="06-css-layout.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動六：我的網站適合哪種版型？</h2>
+                <p class="text-slate-400 text-sm mb-4">比較單欄、兩欄、三欄與側欄版型，調整區域比例。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">CSS</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
+            <a href="07-css-cards.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動七：把內容排得整齊</h2>
+                <p class="text-slate-400 text-sm mb-4">用 flex 排列卡片，統一圖片高度。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">CSS</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
+            <a href="08-css-rwd.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動八：從電腦版變成手機版</h2>
+                <p class="text-slate-400 text-sm mb-4">讓同一份網頁隨畫面寬度調整。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">CSS</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
+            <a href="09-css-accessibility.html" class="block cursor-pointer bg-slate-800/30 border border-slate-700/60 rounded-xl p-6 hover:border-indigo-500/50 hover:-translate-y-1 transition">
+                <h2 class="text-xl font-bold text-white mb-2">活動九：先機檢，再修正無障礙問題</h2>
+                <p class="text-slate-400 text-sm mb-4">用 WAVE 檢查，修正低對比與缺少標籤。</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">CSS</span>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">課程作業</span>
+                </div>
+                <div class="text-indigo-400 text-xs mt-4">查看詳細 →</div>
+            </a>
+
         </div>
     </section>
 
